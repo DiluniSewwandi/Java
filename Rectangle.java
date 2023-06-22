@@ -1,33 +1,40 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package findarea;
+package com.nsbm.findarea;
 
 /**
  *
- * @author Lab User
+ * @author dilus
  */
- public class Rectangle extends Shape {
-    private int width,height;
-   
+public class Rectangle implements Shape {
     
-    /*public void setValues(int width,int height)
+    private int height;
+    private int width;
+    
+    public Rectangle(int height , int width)
     {
+        this.height = height;
         this.width = width;
-        this.height =height;
-    }*/
-    public float calculateArea(int width,int height)
+    }
+
+    public int getHeight()
     {
-       
-     return (float)width * height;
+        return height;
+    }
+    public int getWidth()
+    {
+        return width;
+    }
+    @Override
+    public double calculateArea() {
+         return height * width;
     }
 
     @Override
-    public float calculateArea() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public double calculatePerimeter() {
+        return (2*height + 2*width);
     }
-
-   
+    
 }

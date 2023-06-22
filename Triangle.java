@@ -8,31 +8,34 @@ package com.nsbm.findarea;
  *
  * @author dilus
  */
-public class Circle implements Shape{
+public class Triangle implements Shape {
+    private int height;
+    private int base;
     
-    private int radius;
-    private double area;
     
-    public Circle(int radius)
+    public Triangle(int height , int base)
     {
-        this.radius = radius;
+        this.height= height;
+        this.base = base;
     }
-    public int getRadius()
+    
+    public int getHeight()
     {
-        return radius;
+        return height;
+    }
+    public int getBase()
+    {
+        return base;
     }
 
     @Override
     public double calculateArea() {
-        area =(double)(3.14*radius * radius);
-        return area;
-       
-        
+       return 0.5*base*height; 
     }
 
     @Override
     public double calculatePerimeter() {
-       return (double)(2 *3.14*radius) ; 
+        return 3*base;
     }
     
 }
